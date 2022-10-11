@@ -72,6 +72,7 @@ public class BsLayoutFormView extends Div {
 		entity.setFirstName("John");
 		entity.setLastName("Doe");
 		entity.setBirthDate(LocalDate.of(2000, 1, 1));
+		entity.setDescription("Lorem Ipsum...");
 		form.setEntity(entity);
 		form.setSavedHandler(event -> VNotification.show(form.getEntity().toString()));
 		form.setResetHandler(event -> form.setEntity(new DemoEntity()));

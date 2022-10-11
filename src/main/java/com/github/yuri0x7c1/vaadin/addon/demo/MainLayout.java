@@ -13,7 +13,7 @@ public class MainLayout extends AppLayout {
 	public MainLayout() {
 		addToNavbar(true,
 				new DrawerToggle(),
-				new VH2("Demo").withAddedClassName(LumoUtility.FontSize.LARGE, LumoUtility.Margin.NONE)
+				new VH2("BsLayout Addon Demo").withAddedClassName(LumoUtility.FontSize.LARGE, LumoUtility.Margin.NONE)
 		);
 
 		addToDrawer(new VerticalLayout(
