@@ -18,7 +18,8 @@ public class MainLayout extends AppLayout {
 
 		addToDrawer(new VerticalLayout(
 				new RouterLink("BsLayout Demo", BsLayoutView.class),
-				new RouterLink("BsLayout Form Demo", BsLayoutFormView.class))
-		);
+				new RouterLink("BsLayout Form Demo", BsLayoutFormView.class),
+				new RouterLink("BsCard Demo", BsCardView.class)
+		));
 	}
 }
