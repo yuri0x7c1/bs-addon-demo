@@ -14,7 +14,6 @@ import com.vaadin.flow.component.html.Pre;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.Route;
 
-@CssImport("./styles.css")
 @Route(value = "", layout = MainLayout.class)
 public class BsLayoutView extends VerticalLayout {
 

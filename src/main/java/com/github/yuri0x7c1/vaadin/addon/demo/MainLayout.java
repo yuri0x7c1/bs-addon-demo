@@ -4,10 +4,12 @@ import org.vaadin.firitin.components.html.VH2;
 
 import com.vaadin.flow.component.applayout.AppLayout;
 import com.vaadin.flow.component.applayout.DrawerToggle;
+import com.vaadin.flow.component.dependency.CssImport;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.RouterLink;
 import com.vaadin.flow.theme.lumo.LumoUtility;
 
+@CssImport("./styles.css")
 public class MainLayout extends AppLayout {
 
 	public MainLayout() {
