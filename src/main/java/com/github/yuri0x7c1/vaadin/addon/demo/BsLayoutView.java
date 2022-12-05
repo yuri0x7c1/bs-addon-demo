@@ -2,6 +2,7 @@ package com.github.yuri0x7c1.vaadin.addon.demo;
 
 import org.vaadin.addons.yuri0x7c1.bslayout.BsColumn;
 import org.vaadin.addons.yuri0x7c1.bslayout.BsColumn.Offset;
+import org.vaadin.addons.yuri0x7c1.bslayout.BsColumn.Order;
 import org.vaadin.addons.yuri0x7c1.bslayout.BsColumn.Size;
 import org.vaadin.addons.yuri0x7c1.bslayout.BsLayout;
 import org.vaadin.addons.yuri0x7c1.bslayout.BsRow;
@@ -177,6 +178,40 @@ public class BsLayoutView extends VerticalLayout {
 			+ "		new BsColumn(new Label(\"md-6 offset-md-3\")).withSize(Size.MD, 6).withOffset(Offset.MD, 3)\n"
 			+ "	)\n"
 			+ ");"
+		);
+
+		add(new H2("Reordering columns"));
+
+		addExample(
+			"Reordering columns",
+			new BsLayout(
+				new BsRow(
+					new BsColumn(new Label("1-st, but 3-rd on mobile"))
+						.withOrder(Order.XS, 3)
+						.withOrder(Order.SM, 1),
+					new BsColumn(new Label("2-nd"))
+						.withOrder(Order.XS, 2)
+						.withOrder(Order.SM, 2),
+					new BsColumn(new Label("3-rd, but 1-st on mobile"))
+						.withOrder(Order.XS, 1)
+						.withOrder(Order.SM, 3)
+				)
+			)
+			.withDefaultSize(Size.XS),
+			"new BsLayout(\n"
+			+ "	new BsRow(\n"
+			+ "		new BsColumn(new Label(\"1-st, but 3-rd on mobile\"))\n"
+			+ "			.withOrder(Order.XS, 3)\n"
+			+ "			.withOrder(Order.SM, 1),\n"
+			+ "		new BsColumn(new Label(\"2-nd\"))\n"
+			+ "			.withOrder(Order.XS, 2)\n"
+			+ "			.withOrder(Order.SM, 2),\n"
+			+ "		new BsColumn(new Label(\"3-rd, but 1-st on mobile\"))\n"
+			+ "			.withOrder(Order.XS, 1)\n"
+			+ "			.withOrder(Order.SM, 3)\n"
+			+ "	)\n"
+			+ ")\n"
+			+ ".withDefaultSize(Size.XS),"
 		);
 
 	}
