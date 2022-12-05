@@ -8,5 +8,6 @@
 .source-pre {
 	padding: 12px;
 	box-sizing: border-box;
+	overflow: scroll;
 }
 
